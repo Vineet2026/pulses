@@ -3,7 +3,8 @@ const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
 
 toggle.addEventListener("click", () => {
-  links.style.display = links.style.display === "flex" ? "none" : "flex";
+  const isHidden = links.style.display === "none" || links.style.display === "";
+  links.style.display = isHidden ? "flex" : "none";
 });
 
 // Handle contact form submissions via fetch
